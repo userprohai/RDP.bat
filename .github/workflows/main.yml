@@ -1,0 +1,17 @@
+@echo off
+
+rem Set the following variables:
+set RDP_HOST=localhost
+set RDP_PORT=3389
+set RDP_USERNAME=username
+set RDP_PASSWORD=password
+
+rem Connect to the RDP server:
+rdp /v %RDP_HOST% /p %RDP_PORT% /u %RDP_USERNAME% /p %RDP_PASSWORD%
+
+rem If the connection is successful, display a message:
+if errorlevel 1 (
+  echo Connection failed.
+) else (
+  echo Connection successful.
+)
